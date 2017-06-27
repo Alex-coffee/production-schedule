@@ -1,0 +1,26 @@
+<div class="middle-box text-center loginscreen  animated fadeInDown" ng-controller="loginCtrl">
+    <div>
+        <div>
+            <h1 class="logo-name">Pi</h1>
+        </div>
+                
+        <h3>运输优化</h3>
+                
+        <form id="homeloginForm" class="m-t">
+            <div class="form-group">
+                <input placeholder="{{ 'USERNAME' | translate }}" class="form-control" name="username"
+                    ng-model="loginUser.username" required >
+            </div>
+            <div class="form-group">
+                <input placeholder="{{ 'PASSWORD' | translate }}" class="form-control" name="password"
+                ng-model="loginUser.password" type="password" required>
+            </div>
+                    
+            <label class="checkbox"> 
+                <input id="chkRememberPwd" type="checkbox" />
+                {{ 'REMEMBERME' | translate }}
+            </label>
+            <button id="submitLogin" type="button" class="btn btn-primary block full-width m-b" ng-click="login()">{{ 'LOGIN' | translate }}</button>
+        </form>
+    </div>
+</div>

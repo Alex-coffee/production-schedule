@@ -1,0 +1,38 @@
+<div class="wrapper wrapper-content animated fadeInRight" ng-controller="ganttCtrl">
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="ibox float-e-margins">
+
+                <div id="ganttToolBar" class="ibox-title">
+                    <button class="btn btn-sm btn-primary">
+                        开始优化
+                    </button>
+                </div>
+                <div class="ibox-content fix-height" >
+
+                    <div ng-if="showGantt" id="ganttChartContainer" ganttchart gantt-options="ganttOptions" class="m-t-md">
+                        <div class="loadingInfoContainer">
+
+                            <div class="sk-spinner sk-spinner-wave">
+                                <div class="sk-rect1"></div>
+                                <div class="sk-rect2"></div>
+                                <div class="sk-rect3"></div>
+                                <div class="sk-rect4"></div>
+                                <div class="sk-rect5"></div>
+                            </div>
+                            <span id="loadingInfo">加载中...</span>
+                        </div>
+                    </div>
+
+                    <!--<div id="scoller"></div>-->
+                    <!--<div id="unassigned-bottom"></div>-->
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>

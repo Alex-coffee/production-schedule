@@ -1,0 +1,37 @@
+<div>
+    <div class="modal-header">
+        <h3>登机口距离设置</h3>
+    </div>
+    <div class="modal-body" >
+        <form id="detailForm" class="form-horizontal">
+
+            <div class="form-group">
+                <label class="col-sm-4 control-label">{{'fromGate' | translate}}</label>
+                <div class="col-sm-8">
+                    {{detailItem.fromGate}}
+                </div>
+            </div>
+            <div class="hr-line-dashed"></div>
+
+            <div class="form-group">
+                <label class="col-sm-4 control-label">{{'toGate' | translate}}</label>
+                <div class="col-sm-8">
+                    {{detailItem.toGate}}
+                </div>
+            </div>
+            <div class="hr-line-dashed"></div>
+
+            <div class="form-group">
+                <label class="col-sm-4 control-label">{{'travelTime' | translate}}</label>
+                <div class="col-sm-8">
+                    <input name="travelTime" type="number" min="0" class="form-control" ng-model="detailItem.travelTime" required>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" ng-click="save()">保存</button>
+        <button type="button" class="btn btn-white" ng-click="cancel()">关闭</button>
+    </div>
+</div>

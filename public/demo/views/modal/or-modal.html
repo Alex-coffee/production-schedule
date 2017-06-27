@@ -1,0 +1,65 @@
+<div>
+    <div class="modal-header">
+        <h3>优化参数设置</h3>
+    </div>
+    <div class="modal-body" >
+        <form id="orForm" class="form-horizontal">
+
+            <div class="form-group">
+                <label class="col-sm-4 control-label">班次</label>
+                <div class="col-sm-8">
+                    <select class="form-control" ng-model="orParams.shift">
+                        <option value="M">早班</option>
+                        <option value="E">晚班</option>
+                    </select>
+                </div>
+            </div>
+            <div class="hr-line-dashed"></div>
+            <div class="form-group">
+                <label class="col-sm-4 control-label">员工分组</label>
+                <div class="col-sm-8">
+                    <select class="form-control" ng-model="orParams.staffGroup">
+                        <option value="I">国际</option>
+                        <option value="D">国内</option>
+                    </select>
+                </div>
+            </div>
+            <div class="hr-line-dashed"></div>
+            <div class="form-group">
+                <label class="col-sm-4 control-label">子分组</label>
+                <div class="col-sm-8">
+                    <select class="form-control" ng-model="orParams.subGroup">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                </div>
+            </div>
+            <div class="hr-line-dashed"></div>
+            <div class="form-group">
+                <label class="col-sm-4 control-label">是否有执照</label>
+                <div class="col-sm-8">
+                    <select class="form-control" ng-model="orParams.lisence">
+                        <option value="true">有</option>
+                        <option value="false">无</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button ng-disabled="inProcess" type="button" class="btn btn-danger pull-left" ng-click="resetResult()">
+            <i ng-if="inProcess" class="fa fa-spin fa-spinner m-r-xs"></i>
+            清除结果
+        </button>
+
+        <button type="button" class="btn btn-white" ng-click="cancel()">关闭</button>
+        <button ng-disabled="inProcess" type="button" class="btn btn-primary" ng-click="runOR()">
+            <i ng-if="inProcess" class="fa fa-spin fa-spinner m-r-xs"></i>
+            分组优化
+        </button>
+        <button ng-disabled="inProcess" type="button" class="btn btn-primary" ng-click="runBatchOR()">
+            <i ng-if="inProcess" class="fa fa-spin fa-spinner m-r-xs"></i>
+            全局优化
+        </button>
+    </div>
+</div>

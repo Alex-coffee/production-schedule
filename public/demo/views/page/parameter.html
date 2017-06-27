@@ -1,0 +1,78 @@
+<div class="wrapper wrapper-content animated fadeInRight" ng-controller="parameterCtrl">
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>参数设置</h5>
+                </div>
+
+                <div class="ibox-content">
+                    <form id="paramForm" class="form-horizontal">
+                        <div class="form-group parameter-item" ng-repeat="(key, paramObj) in parameters">
+                            <label class="col-sm-4 control-label">
+                                {{key | translate}}
+                            </label>
+
+                            <div class="col-sm-8">
+
+
+                                <input ng-if="getType(key) == 'number'" type="number" ng-model="parameters[key]" class="form-control" required>
+
+                                <div ng-if="getType(key) == 'radio'" >
+                                    <label class="m-l-sm">
+                                        <input name="{{key}}" type="radio" ng-model="parameters[key]" ng-value="true">
+                                        <span>是</span>
+                                    </label>
+                                    <label class="m-l-sm">
+                                        <input name="{{key}}" type="radio" ng-model="parameters[key]" ng-value="false">
+                                        <span>否</span>
+                                    </label>
+                                </div>
+
+                                <div ng-if="getType(key) == 'table'" >
+                                    <table class="table table-striped" >
+                                        <tr>
+                                            <th>{{"startTime" | translate}}</th>
+                                            <th>{{"endTime" | translate}}</th>
+                                            <th></th>
+                                        </tr>
+                                        <tr ng-repeat="mTime in parameters[key] | orderBy: 'startTime'">
+                                            <td>{{mTime.startTime}}</td>
+                                            <td>{{mTime.endTime}}</td>
+                                            <td>
+                                                <div class="btn-group btn-group-xs">
+                                                    <button class="btn btn-success" ng-click="editMealTime(mTime)">
+                                                        <i class="fa fa-pencil"></i>
+                                                    </button>
+                                                    <button class="btn btn-danger" ng-click="removeMealTime(mTime)">
+                                                        <i class="fa fa-times"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <button class="btn btn-primary btn-xs" ng-click="newMealTime()">
+                                        <i class="fa fa-plus m-r-xs"></i>
+                                        新增
+                                    </button>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </form>
+
+                    <button class="btn btn-primary pull-right" ng-click="save()">
+                        保存
+                    </button>
+
+                    <div class="clearfix"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

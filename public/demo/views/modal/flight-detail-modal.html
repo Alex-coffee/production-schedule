@@ -1,0 +1,79 @@
+<div>
+    <div class="modal-header">
+        <h3>航班设置</h3>
+    </div>
+    <div class="modal-body" >
+        <form id="detailForm" class="form-horizontal">
+
+            <div class="form-group">
+                <label class="col-sm-4 control-label">{{'flightId' | translate}}</label>
+                <div class="col-sm-8">
+                    {{detailItem.flightId}}
+                </div>
+            </div>
+            <div class="hr-line-dashed"></div>
+
+            <div class="form-group">
+                <label class="col-sm-4 control-label">{{'depTime' | translate}}</label>
+                <div class="col-sm-8">
+                    <input name="depTime" type="number" min="0" max="86400" class="form-control" ng-model="detailItem.depTime" required>
+                </div>
+            </div>
+            <div class="hr-line-dashed"></div>
+
+            <div class="form-group">
+                <label class="col-sm-4 control-label">{{'fleetType' | translate}}</label>
+                <div class="col-sm-8">
+                    {{detailItem.fleetType}}
+                </div>
+            </div>
+            <div class="hr-line-dashed"></div>
+
+            <div class="form-group">
+                <label class="col-sm-4 control-label">{{'flightNum' | translate}}</label>
+                <div class="col-sm-8">
+                    {{detailItem.flightNum}}
+                </div>
+            </div>
+            <div class="hr-line-dashed"></div>
+
+            <div class="form-group">
+                <label class="col-sm-4 control-label">{{'gate' | translate}}</label>
+                <div class="col-sm-8">
+                    <input name="gate" type="text" class="form-control" ng-model="detailItem.depTime" required>
+                </div>
+            </div>
+            <div class="hr-line-dashed"></div>
+
+            <div class="form-group">
+                <label class="col-sm-4 control-label">{{'gateArea' | translate}}</label>
+                <div class="col-sm-8">
+                    <input name="gateArea" type="text" class="form-control" ng-model="detailItem.depTime" required>
+                </div>
+            </div>
+            <div class="hr-line-dashed"></div>
+
+            <div class="form-group">
+                <label class="col-sm-4 control-label">{{'intDomType' | translate}}</label>
+                <div class="col-sm-8">
+                    <select name="intDomType" class="form-control" ng-model="detailItem.intDomType" required>
+                        <option value="D">D</option>
+                        <option value="I">I</option>
+                    </select>
+                </div>
+            </div>
+            <div class="hr-line-dashed"></div>
+
+            <div class="form-group">
+                <label class="col-sm-4 control-label">{{'lisence' | translate}}</label>
+                <div class="col-sm-8">
+                    <input name="lisence" type="checkbox" ng-model="detailItem.lisence" style="width: 20px; height: 20px;">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" ng-click="save()">保存</button>
+        <button type="button" class="btn btn-white" ng-click="cancel()">关闭</button>
+    </div>
+</div>

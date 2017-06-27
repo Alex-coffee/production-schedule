@@ -1,0 +1,87 @@
+<div>
+    <div class="modal-header">
+        <h3>人员详情设置</h3>
+    </div>
+    <div class="modal-body" >
+        <form id="detailForm" class="form-horizontal">
+
+            <div class="form-group">
+                <label class="col-sm-4 control-label">是否批量添加</label>
+                <div class="col-sm-8">
+                    <input name="isBatch" type="checkbox" ng-model="batch.isBatch" style="width: 20px; height: 20px;">
+                </div>
+            </div>
+            <div class="hr-line-dashed"></div>
+
+            <div ng-if="batch.isBatch">
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">
+                        添加数量
+                    </label>
+                    <div class="col-sm-8">
+                        <input name="batchNumber" ng-init="batch.batchNumber = 1" type="number" min="1" max="1000"
+                               class="form-control" ng-model="batch.batchNumber" required>
+                    </div>
+                </div>
+                <div class="hr-line-dashed"></div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-4 control-label">
+                    <span ng-if="batch.isBatch">批量</span>{{'staffId' | translate}}<span ng-if="batch.isBatch">开始数</span>
+                </label>
+                <div class="col-sm-8">
+                    <input name="staffId" type="number" class="form-control" ng-model="detailItem.staffId" required>
+                </div>
+            </div>
+            <div class="hr-line-dashed"></div>
+
+            <div class="form-group">
+                <label class="col-sm-4 control-label">{{'groupType' | translate}}</label>
+                <div class="col-sm-8">
+                    <select name="groupType" class="form-control" ng-model="detailItem.groupType" required>
+                        <option value="D">D</option>
+                        <option value="I">I</option>
+                    </select>
+                </div>
+            </div>
+            <div class="hr-line-dashed"></div>
+
+            <div class="form-group">
+                <label class="col-sm-4 control-label">{{'subGroupType' | translate}}</label>
+                <div class="col-sm-8">
+                    <select name="subGroupType" class="form-control" ng-model="detailItem.subGroupType" required>
+                        <option ng-if="detailItem.groupType == 'D'" value="D1">D1</option>
+                        <option ng-if="detailItem.groupType == 'D'" value="D2">D2</option>
+                        <option ng-if="detailItem.groupType == 'I'" value="I1">I1</option>
+                        <option ng-if="detailItem.groupType == 'I'" value="I2">I2</option>
+                    </select>
+                </div>
+            </div>
+            <div class="hr-line-dashed"></div>
+
+            <div class="form-group">
+                <label class="col-sm-4 control-label">{{'shiftType' | translate}}</label>
+                <div class="col-sm-8">
+                    <select name="shiftType" class="form-control" ng-model="detailItem.shiftType" required>
+                        <option value="M">M</option>
+                        <option value="E">E</option>
+                    </select>
+                </div>
+            </div>
+            <div class="hr-line-dashed"></div>
+
+            <div class="form-group">
+                <label class="col-sm-4 control-label">{{'driveLisence' | translate}}</label>
+                <div class="col-sm-8">
+                    <input name="driveLisence" type="checkbox" ng-model="detailItem.driveLisence" style="width: 20px; height: 20px;">
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" ng-click="save()">保存</button>
+        <button type="button" class="btn btn-white" ng-click="cancel()">关闭</button>
+    </div>
+</div>

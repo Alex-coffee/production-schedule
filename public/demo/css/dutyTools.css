@@ -1,0 +1,209 @@
+.fix-height{
+    min-height: 550px;
+}
+.table-inline-edit input{
+    width: 100px !important;
+}
+.table .pagination{
+    margin: 0;
+}
+
+.table-condensed tr > td:nth-child(odd){
+    width: 120px;
+    text-align: right;
+}
+.itemList{margin-left: 0; padding:3px; border: 1px solid #e5e6e7;border-radius: 1px; height: 100px; overflow-y: auto}
+.itemList li{
+    list-style: none;
+    padding: 3px 15px;
+}
+.itemList li:hover{
+    background-color: #efefef;
+}
+.removeIcon{
+    cursor: pointer;
+}
+.paginate_button, .paginate_button:hover{
+    background-color: #bababa;
+    border-color: #bababa;
+    color: #FFFFFF;
+    margin:0 5px 5px 0;
+    text-decoration: none;
+    border-radius: 3px;
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+#ganttToolBar{
+    min-height: 60px;
+}
+
+.restricion-content td .tooltip{
+    word-break:break-word;
+}
+
+.modal-full{
+    width: 100%;
+}
+.rangField p{
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    width:120px;
+}
+.loadingInfoContainer{
+    font-size: 20px;
+    margin: 50px auto 0 auto;
+    width: 300px;
+}
+
+.loadingInfoContainer .sk-spinner-wave.sk-spinner{
+    display: inline-block;
+    margin:0;
+    height:15px;
+}
+.modal-scroller{
+    max-height: 500px;
+    overflow-y: auto;
+}
+.addrList {
+    width: 600px;
+    margin-left: 70px;
+}
+
+.onoffswitch-inner.publishSwitch:before {
+    content: "AND";
+    padding-left: 7px;
+    background-color: #1AB394;
+    color: #FFFFFF;
+}
+.onoffswitch-inner.publishSwitch:after {
+    content: "OR";
+    padding-right: 7px;
+    background-color: #FFFFFF;
+    color: #919191;
+    text-align: right;
+}
+
+/**
+Configurations - planes
+**/
+.aircraftList > li > a{
+    padding: 3px 10px;
+}
+.switchery-small{
+    border-radius: 20px;
+    height: 20px;
+    width: 33px;
+}
+.switchery-small>small {
+    height: 20px;
+    width: 20px;
+}
+.longContainer{
+    min-height: 872px;
+}
+.lopa-rotated{
+    transform: rotate(90deg);
+    padding: 3px;
+}
+.lopa-container .tab-content{
+    width: 920px;
+    height: 216px;
+}
+.lopa-container .tabs-container .panel-body{
+    height: 230px;
+}
+
+table.overview {width: 100%;}
+table.overview tr td, table.overview tr th{width:275px; text-align: right; font-size: 12px;}
+table.overview tr td:first-child, table.overview tr th:first-child{width:200px; text-align: left; font-weight: bold;}
+
+table.subOverview {width: 100%;}
+table.subOverview tr td, table.subOverview tr th{width:275px; text-align: right; font-size: 12px; padding: 5px 0;}
+table.subOverview tr td:first-child, table.subOverview tr th:first-child{width:200px; font-weight: bold;}
+
+.KIP-table-header {
+    padding: 10px 15px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #1ab394;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 5px;
+}
+
+.page_navigation{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.page_navigation a, .page_navigation span.ellipse{
+    color: rgb(119, 119, 119);
+    background-color: rgb(255, 255, 255);
+    border: solid 1px rgb(221, 221, 221);
+    border-right: none;
+    padding: 4px 10px;
+}
+
+.page_navigation a:first-child{
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.page_navigation a:last-child{
+    border-right: solid 1px rgb(221, 221, 221);
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.page_navigation a.active_page{
+    background-color: rgb(244, 244, 244);
+}
+
+.page_navigation a.no_more{
+    cursor: not-allowed;
+}
+
+.vehicle.puck_block{
+    background-color: rgba(28, 132, 198, .7);
+    color: white;
+    border: 1px solid #1c84c6;
+    z-index: 10;
+    border-radius: 0;
+}
+.delayBlock {
+    background-color: rgba(28, 132, 198, .3);
+    position: absolute;
+    left: 0;
+}
+.parameter-item{
+    margin: 15px;
+}
+.routePanel .svg-pan-zoom_viewport{
+    cursor: -webkit-grab;
+}
+
+svg circle, svg tspan{
+    font-family: FontAwesome;
+}
+
+svg tspan.planeIcon{
+    font-size: 18px;
+}
+.fields-container{
+    min-height: 100px;
+    background-color: white;
+    padding: 10px;
+    border: 1px dashed #ccc;
+}
+.fields-container li{
+    list-style: none;
+    padding: 10px 30px;
+    font-size: 14px;
+    border: 1px solid #dddddd;
+    background-color: #f6f6f6;
+    margin-bottom: 2px;
+    cursor: move;
+}

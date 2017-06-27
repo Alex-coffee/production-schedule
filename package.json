@@ -1,0 +1,23 @@
+{
+  "name": "installation",
+  "version": "0.5.0",
+  "description": "Pi-Solution web apps",
+  "main": "server.js",
+  "author": "Alex.Chen",
+  "dependencies": {
+    "angular-svg-base": "*",
+    "angular-ui-sortable": "^0.17.1",
+    "body-parser": "*",
+    "express": "*",
+    "method-override": "*",
+    "morgan": "*",
+    "multer": "*",
+    "mysql": "*",
+    "nodemailer": "0.7.1",
+    "q": "*",
+    "sequelize": "*"
+  },
+  "devDependencies": {
+    "async": "^2.4.0"
+  }
+}

@@ -1,0 +1,54 @@
+<div class="wrapper wrapper-content animated fadeInRight" ng-controller="orderCtrl">
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>航班列表</h5>
+                </div>
+                <div class="ibox-content">
+
+                    <div pajinate data-source="dataList" data-page-size="10" >
+
+                        <table class="table table-striped table-bordered table-hover " >
+                            <thead>
+                            <tr>
+                                <th>{{'orderName' | translate}}</th>
+                                <th>{{'initialStorage' | translate}}</th>
+                                <th>{{'safeStorage' | translate}}</th>
+                                <th>{{'unitCost' | translate}}</th>
+                                <th>{{'demands' | translate}}</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody class="content">
+                            <tr ng-repeat="o in dataList">
+                                <td>{{o.orderName}}</td>
+                                <td>{{o.initialStorage}}</td>
+                                <td>{{o.safeStorage}}</td>
+                                <td>{{o.unitCost}}</td>
+                                <td>{{o.demands}}</td>
+                                <td>
+                                    <button class="btn btn-success btn-xs" ng-click="edit(o)">
+                                        修改
+                                    </button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="clearfix"></div>
+                        <div class="page_navigation"></div>
+                    </div>
+
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+</div>
